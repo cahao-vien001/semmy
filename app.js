@@ -8,13 +8,7 @@ var main = function() {
 	    $(".comments").append($new_comment);
 	    $new_comment.fadeIn();
 	    $(".comment-input input").val("");
-	    // var $new_comment = $("<p>");
-	    // var comment_text = $(".comment-input input").val();
-	    // $new_comment.text(comment_text);
-	    // $(".comments").append($new_comment);
-	    // $(".comment-input input").val("");
-	    // //console.log("Hello World!");
-	    // //$(".comments").append("<p>this is a new comment</p>");
+	    
 	}
     });
     $(".comment-input input").on("keypress", function(e) {
@@ -26,16 +20,15 @@ var main = function() {
 		$(".comments").append($new_comment);
 		$new_comment.fadeIn();
 		$(".comment-input input").val("");
-		// var $new_comment = $("<p>");
-		// var comment_text = $(".comment-input input").val();
-		// $new_comment.text(comment_text);
-		// $(".comments").append($new_comment);
-		// $(".comment-input input").val("");
-		// //console.log("Hello World!");
-		// //$(".comments").append("<p>this is a new comment</p>");
+		
 	    }
 	}
     });
+
+    var $newUL = $("<ul>");
+    var $newParagraphElement = $("<p>");
+    $newParagraphElement.text("this is a paragraph");
+    $("footer").append($newParagraphElement);
 };
 
 $(document).ready(main);
