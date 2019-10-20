@@ -1,5 +1,21 @@
+var tabSelector = function(tabNum) {
+    "use strict";
+    var tabString1 = ".tabs a:nth-child(";
+    var tabString2 = ")"
+    $(tabString1+tabNum+tabString2).on("click", function() {
+	$(".tabs span").removeClass("active");
+	$(tabString1+tabNum+tabString2+" span").addClass("active");
+	$("main .content").empty();
+	return false;
+    });
+};
+
 var main = function() {
     "use strict";
+    tabSelector(1);
+    tabSelector(2);
+    tabSelector(3);
+    
     $(".comment-input button").on("click", function(e) {
 	var $new_comment;
 	if($(".comment-input input").val() !== "") {
