@@ -29,6 +29,19 @@ var main = function() {
     var $newParagraphElement = $("<p>");
     $newParagraphElement.text("this is a paragraph");
     $("footer").append($newParagraphElement);
+    var $nextULThing = ulCreator(6);
+    $(".comments").append($nextULThing);
+    
 };
+
+var ulCreator = function(numLi) {
+    var $ulThing = $("<ul>");
+    var i = 0;
+    for(i = 0; i<numLi; i++) {
+	var $liThing = $("<li>").text("this is a li thing");
+	$ulThing.append($liThing);
+    }
+    return $ulThing;
+}
 
 $(document).ready(main);
